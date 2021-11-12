@@ -2,16 +2,73 @@
 <html lang="ja">
 
 <head>
-    <script type="text/javascript" src="js/test.js"></script>
-    <link rel="stylesheet" href="css/style.css">
-    <meta charset="UTF-8">
-    <title>密警告</title>
+  <script type="text/javascript" src="js/test.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>密警告</title>
 </head>
 
 <body>
-    <main id="main-block">
-        <p>未稼動</p>
-    </main>
+  <main id="main-block">
+    <!-- <p>未稼動</p> -->
+    <div id="status" class="ng">
+      <div class="contents-wrap" id="status-top">
+        密です
+      </div>
+      <div class="animation-wrap">
+        <div class="person left">
+          <svg viewBox="0 0 120 250">
+            <line class="r-arm" x1="60" y1="68" x2="60" y2="150" />
+            <line class="r-leg" x1="60" y1="140" x2="60" y2="230" />
+            <circle class="head" cx="58" cy="27" r="25" />
+            <rect class="body" width="40" height="85" x="40" y="55" rx="18" ry="18" />
+            <line class="l-leg" x1="60" y1="140" x2="60" y2="230" />
+            <line class="l-arm" x1="60" y1="68" x2="60" y2="150" />
+          </svg>
+        </div>
+        
+        <div class="center">
+          <div class="top">
+            <div class="triangle-wrap left">
+              <svg viewBox="0 0 242.29 268.02">
+                <polygon class="triangle" points="204.29 38, 38 134.01, 204.29 230.02, 204.29 38" />
+              </svg>
+            </div>
+            <svg viewBox="0 0 400 125">
+              <line class="arrow left" x1="400" y1="62.5" x2="0" y2="62.5" />
+            </svg>
+            <svg viewBox="0 0 400 125">
+              <line class="arrow right" x1="0" y1="62.5" x2="400" y2="62.5" />
+            </svg>
+            <div class="triangle-wrap right">
+              <svg viewBox="0 0 242.29 268.02">
+                <polygon class="triangle" points="38 38 204.29 134.01 38 230.02 38 38" />
+              </svg>
+            </div>
+          </div>
+
+          <div class="bottom">
+            2m
+          </div>
+        </div>
+
+        <div class="person right">
+          <svg viewBox="0 0 120 250">
+            <line class="r-arm" x1="60" y1="68" x2="60" y2="150" />
+            <line class="r-leg" x1="60" y1="140" x2="60" y2="230" />
+            <circle class="head" cx="58" cy="27" r="25" />
+            <rect class="body" width="40" height="85" x="40" y="55" rx="18" ry="18" />
+            <line class="l-leg" x1="60" y1="140" x2="60" y2="230" />
+            <line class="l-arm" x1="60" y1="68" x2="60" y2="150" />
+          </svg>
+        </div>
+      </div>
+      <div class="contents-wrap m-txt">
+        Please keep a distance.
+      </div>
+    </div>
+  </main>
 </body>
 
 </html>

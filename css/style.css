@@ -1,64 +1,385 @@
-*{
-    margin: 0;
+* {
+  margin: 0;
 }
-main{
-    height: 100vh;
+
+main {
+  height: 100vh;
+  color: #fff;
 }
-#status{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 100%;
-    animation-name: change;
-    animation-fill-mode: forwards;
-    animation-duration: 1s;
+
+#status {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 100%;
+  animation-name: change;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
 }
-#status.ng{
-    background-color: #ce4e4e;
+
+#status.ng {
+  background-color: #cf5a5a;
 }
-#status.ok{
-    position: absolute;
-    top: 100%;
-    background-color: #4e86ce;
-    animation-name: change;
-    animation-fill-mode: forwards;
-    animation-duration: 1s;
+
+#status.ok {
+  background-color: #4e86ce;
 }
-#contents-wrap{
-    position: relative;
-    top: 5%;
-    opacity: 0;
-    animation-name: appear_contens;
-    animation-fill-mode: forwards;
-    animation-duration: 0.5s;
-    animation-delay: 1s;
+
+.m-txt {
+  margin: 2rem;
+  /* font-size: 1.3rem; */
+  font-size: 8.0rem;
+  font-weight: bold;
 }
-#status-top{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 5rem;
-    font-weight: bold;
-    color: #fff;
+
+.contents-wrap {
+  position: relative;
+  top: 5%;
+  opacity: 0;
+  animation-name: appear_contens;
+  animation-fill-mode: forwards;
+  animation-duration: 0.5s;
+  animation-delay: 1s;
 }
-#status-top .en{
-    display: block;
-    font-size: 2rem;
+
+#status-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* font-size: 6rem; */
+  font-size: 20rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+#status-top .en {
+  display: block;
+  font-size: 2rem;
 }
 
 @keyframes appear_contens {
-    100%{
-        opacity: 1;
-        top: 0%;
-    }
+  100% {
+    opacity: 1;
+    top: 0%;
   }
+}
 
 @keyframes change {
-    100%{
-        top: 0;
-    }
+  100% {
+    top: 0;
   }
+}
+
+
+.animation-wrap {
+  /* width: 40vw;
+  height: 15vw; */
+  width: 100vw;
+  height: 25vh;
+  margin-top: 1rem;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  top: 5%;
+  opacity: 0;
+  animation-name: appear_contens;
+  animation-fill-mode: forwards;
+  animation-duration: 0.5s;
+  animation-delay: 1s;
+}
+
+.center{
+  width: 350px;
+  margin-top: -100px;
+  position: absolute;
+  top: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.center .top {
+  display: flex;
+  align-items: center;
+}
+.center .bottom{
+  text-align: center;
+  font-size: 7rem;
+  font-weight: bold;
+  opacity: 0;
+  animation: appear 1s ease 2s 1 normal forwards;;
+}
+
+.arrow {
+  stroke-width: 70px;
+  stroke: #fff;
+  stroke-miterlimit: 10;
+  stroke-dasharray: 400px;
+  stroke-dashoffset: 400px;
+  animation: arrow_line_appear 1s ease 2s 1 normal forwards;
+}
+
+.triangle {
+  stroke: #fff;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 76px;
+  fill: #fff;
+}
+
+.triangle-wrap {
+  width: 100px;
+  position: absolute;
+  opacity: 0;
+}
+.triangle-wrap.left{
+  left: 0px;
+  animation: arrow_triangle_appear_left 0.5s ease 2.5s 1 normal forwards;
+}
+.triangle-wrap.right {
+  right: 0px;
+  animation: arrow_triangle_appear_right 0.5s ease 2.5s 1 normal forwards;
+}
+
+@keyframes appear {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+  
+}
+@keyframes arrow_line_appear {
+  0% {
+    stroke-dashoffset: 400px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+  }
+}
+
+@keyframes arrow_triangle_appear_left {
+  0% {
+    left: -30px;
+    opacity: 0;
+  }
+  100% {
+    left: -90px;
+    opacity: 1;
+  }
+}
+@keyframes arrow_triangle_appear_right {
+  0% {
+    right: -30px;
+    opacity: 0;
+  }
+  100% {
+    right: -90px;
+    opacity: 1;
+  }
+}
+
+.person {
+  /* width: 18%; */
+  width: 20%;
+  height: 100%;
+  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+}
+
+.person .head {
+  fill: #fff;
+}
+
+.person.left {
+  animation:
+    warking-person-left 1.6s linear 1.5s 1 normal forwards;
+}
+
+.person.right {
+  animation:
+    warking-person-right 1.6s linear 1.5s 1 normal forwards;
+}
+
+.person .body {
+  fill: #ebebeb;
+  transform-origin: 60px 97.5px;
+  animation: to-front-body 0.3s linear 3.1s 1 normal forwards;
+}
+
+.person .l-arm,
+.person .r-arm {
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 22;
+  stroke-linecap: round;
+  stroke-miterlimit: 10;
+}
+
+.person .l-arm {
+  transform-origin: 60px 68px;
+  animation:
+    start-warking-l-arm 0.4s linear 1.5s 1,
+    warking-arm 0.8s linear 1.9s 1.5 alternate-reverse,
+    to-front-l-arm 0.3s linear 3.1s 1 forwards;
+}
+
+.person .r-arm {
+  transform-origin: 60px 68px;
+  animation:
+    start-warking-r-arm 0.4s linear 1.5s 1,
+    warking-arm 0.8s linear 1.9s 1.5 alternate,
+    to-front-r-arm 0.3s linear 3.1s 1 forwards;
+}
+
+.person .l-leg,
+.person .r-leg {
+  fill: none;
+  stroke: #ebebeb;
+  stroke-width: 35;
+  stroke-linecap: round;
+  stroke-miterlimit: 10;
+}
+
+.person .r-leg {
+  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+  transform-origin: 60px 140px;
+  animation:
+    start-warking-r-leg 0.4s linear 1.5s 1 forwards,
+    warking-leg 0.8s linear 1.9s 1.5 alternate-reverse forwards,
+    to-front-r-leg 0.3s linear 3.1s 1 forwards;
+}
+
+.person .l-leg {
+  transform-origin: 60px 140px;
+  animation:
+    start-warking-l-leg 0.4s linear 1.5s 1 forwards,
+    warking-leg 0.8s linear 1.9s 1.5 alternate forwards,
+    to-front-l-leg 0.3s linear 3.1s 1 forwards;
+}
+
+@keyframes start-warking-r-arm {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(-30deg);
+  }
+}
+
+@keyframes start-warking-l-arm {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(30deg);
+  }
+}
+
+@keyframes warking-arm {
+  0% {
+    transform: rotate(-30deg);
+  }
+
+  50% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(30deg);
+  }
+}
+
+@keyframes start-warking-l-leg {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(-20deg);
+  }
+}
+
+@keyframes start-warking-r-leg {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(20deg);
+  }
+}
+
+@keyframes warking-leg {
+  0% {
+    transform: rotate(-20deg);
+  }
+
+  50% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(20deg);
+  }
+}
+
+@keyframes warking-person-left {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-300px);
+  }
+}
+
+@keyframes warking-person-right {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(300px);
+  }
+}
+
+@keyframes to-front-body {
+  100% {
+    fill: #fff;
+    transform: scaleX(1.5);
+    rx: 15;
+  }
+}
+
+@keyframes to-front-r-arm {
+  100% {
+    transform: translate(19px, 4px) rotate(-17deg);
+  }
+}
+
+@keyframes to-front-l-arm {
+  100% {
+    transform: translate(-19px, 4px) rotate(17deg);
+  }
+}
+
+@keyframes to-front-r-leg {
+  100% {
+    stroke-width: 30px;
+    stroke: #fff;
+    transform: scaleY(1.2) translate(12px, -15px) rotate(-5deg);
+  }
+}
+
+@keyframes to-front-l-leg {
+  100% {
+    stroke-width: 30px;
+    stroke: #fff;
+    transform: scaleY(1.2) translate(-12px, -15px) rotate(5deg);
+  }
+}
