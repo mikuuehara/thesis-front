@@ -6,15 +6,18 @@
   <link rel="stylesheet" href="css/style.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" rel="stylesheet">
   <title>密警告</title>
 </head>
 
 <body>
-  <main id="main-block">
-    <!-- <p>未稼動</p> -->
-    <div id="status" class="ng">
-      <div class="contents-wrap" id="status-top">
-        密です
+  <main id="ok">
+    <div class="bg ok"></div>
+    <div class="bg ng"></div>
+    <div class="status">
+      <div class="contents-wrap">
+        <div class="status-top ok">OK</div>
+        <div class="status-top ng">密です</div>
       </div>
       <div class="animation-wrap">
         <div class="person left">
@@ -27,7 +30,7 @@
             <line class="l-arm" x1="60" y1="68" x2="60" y2="150" />
           </svg>
         </div>
-        
+
         <div class="center">
           <div class="top">
             <div class="triangle-wrap left">
@@ -65,8 +68,38 @@
         </div>
       </div>
       <div class="contents-wrap m-txt">
-        Please keep a distance.
+        <div class="ok">Thank you for your cooperation.</div>
+        <div class="ng">Please keep a distance.</div>
       </div>
+    </div>
+    <div id="normal">
+      <div class="h1-wrap">
+        <h1 class="y-under">新型コロナウイルス感染症対策</h1>
+      </div>
+      <div class="block-01 item1">
+        手洗い・消毒
+        <span class="en">Wash your hands</span>
+        <div class="img-wrap">
+          <i class="fas fa-hands-wash fa-my-fands-wash"></i>
+        </div>
+      </div>
+      <div class="block-01 item2">
+        マスクの着用
+        <span class="en">Wear a mask</span>
+        <div class="img-wrap">
+          <i class="fas fa-head-side-mask fa-my-head-side-mask"></i>
+        </div>
+      </div>
+      <div class="block-01 item3">
+        密閉・密集・密接を避ける
+        <span class="en">Keep your distance</span>
+        <div class="img-wrap">
+          <i class="fas fa-male fa-person"></i>
+          <i class="fas fa-arrows-alt-h fa-my-arrow"></i>
+          <i class="fas fa-male fa-person"></i>
+        </div>
+      </div>
+      <p class="normal-bottom">ご協力お願いいたします</p>
     </div>
   </main>
 </body>
